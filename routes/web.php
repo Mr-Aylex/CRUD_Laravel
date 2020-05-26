@@ -13,15 +13,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-Route::get('menu','cree_controller@menu');
-Route::get('new_perso','cree_controller@new_perso');
-Route::post('nouveau', function() {
-    return 'Votre prenom est'.request('prenom');
-});
+Route::get('/','cree_controller@menu');
 
-//Auth::routes();
+//Route::get('menu','cree_controller@menu');
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('new_perso','cree_controller@formulaire');
+
+Route::post('nouveau','cree_controller@new_perso');
+
+Route::post('suppression','cree_controller@suppression');

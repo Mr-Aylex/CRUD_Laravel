@@ -1,5 +1,5 @@
 <html>
-    <a href="menu">Menu</a>
+    <a href="/">Menu</a>
 <form action="nouveau" method="POST" class="">
     {{ csrf_field() }}
     <div>
